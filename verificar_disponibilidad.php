@@ -15,7 +15,6 @@ if (!$conectar) {
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
-    // Verificar si es petición para obtener horarios
     if (isset($_POST['accion']) && $_POST['accion'] === 'obtener_horarios') {
         $fecha = isset($_POST['fecha']) ? mysqli_real_escape_string($conectar, trim($_POST['fecha'])) : '';
         
@@ -68,7 +67,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
     
-    // Verificación normal de disponibilidad
     $fecha = isset($_POST['fecha']) ? mysqli_real_escape_string($conectar, trim($_POST['fecha'])) : '';
     $hora = isset($_POST['hora']) ? mysqli_real_escape_string($conectar, trim($_POST['hora'])) : '';
     
@@ -124,21 +122,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($total_perros >= 2) {
         echo json_encode([
             'disponible' => false,
-            'mensaje' => '❌ Este horario está completo',
+            'mensaje' => ' Este horario está completo',
             'ocupado' => true,
             'perros_actuales' => $total_perros
         ]);
     } else if ($total_perros == 1) {
         echo json_encode([
             'disponible' => true,
-            'mensaje' => '⚠️ Este horario tiene 1 espacio ocupado. Solo queda 1 espacio disponible',
+            'mensaje' => ' Este horario tiene 1 espacio ocupado. Solo queda 1 espacio disponible',
             'espacios_disponibles' => 1,
             'perros_actuales' => $total_perros
         ]);
     } else {
         echo json_encode([
             'disponible' => true,
-            'mensaje' => '✅ Este horario está disponible',
+            'mensaje' => ' Este horario está disponible',
             'espacios_disponibles' => 2,
             'perros_actuales' => 0
         ]);
