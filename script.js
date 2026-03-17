@@ -4,7 +4,7 @@ let contadorPerros = 1;
 let timeoutVerificacion = null;
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('✅ Sistema cargado correctamente');
+    console.log(' Sistema cargado correctamente');
     
     const primerPerro = document.querySelector('.perro-item');
     if (primerPerro) {
@@ -91,7 +91,7 @@ function deshabilitarFechasBloqueadas() {
         const diaSemana = fechaSeleccionada.getDay();
         
         if (diaSemana === 0) {
-            alert('🚫 Los domingos no trabajamos. Por favor selecciona otro día.');
+            alert(' Los domingos no trabajamos. Por favor selecciona otro día.');
             this.value = '';
         }
     });
@@ -412,7 +412,7 @@ function agregarNuevoPerro() {
 
     const container = document.getElementById('perrosContainer');
     if (!container) {
-        console.error('❌ No se encontró el contenedor de perros');
+        console.error(' No se encontró el contenedor de perros');
         return;
     }
 
@@ -421,9 +421,9 @@ function agregarNuevoPerro() {
     
     nuevoPerro.innerHTML = `
         <div class="perro-header">
-            <span class="perro-numero">🐕 Perro #${contadorPerros + 1}</span>
+            <span class="perro-numero"> Perro #${contadorPerros + 1}</span>
             <button type="button" class="btn-eliminar" onclick="eliminarPerro(this)">
-                ❌ Eliminar
+                 Eliminar
             </button>
         </div>
 
@@ -449,7 +449,7 @@ function agregarNuevoPerro() {
         </div>
 
         <div class="descripcion-servicio" style="display: none;">
-            <strong>✨ Este servicio incluye:</strong>
+            <strong> Este servicio incluye:</strong>
             <p class="texto-descripcion"></p>
         </div>
 
@@ -459,7 +459,7 @@ function agregarNuevoPerro() {
             <div class="checkbox-item">
                 <input type="checkbox" name="perros[${contadorPerros}][adicionales][]" value="1" id="adicional_1_${contadorPerros}">
                 <label for="adicional_1_${contadorPerros}">
-                    ✂️ Corte de uñas 
+                     Corte de uñas 
                     <span class="checkbox-precio">(+$5000)</span>
                 </label>
             </div>
@@ -475,15 +475,15 @@ function agregarNuevoPerro() {
 
         <div class="info-box info-precio" style="display: none;">
             <div class="info-item">
-                <span class="label">💰 Precio Base:</span>
+                <span class="label"> Precio Base:</span>
                 <span class="value precio-value">-</span>
             </div>
             <div class="info-item">
-                <span class="label">➕ Adicionales:</span>
+                <span class="label"> Adicionales:</span>
                 <span class="value adicionales-value">$0</span>
             </div>
             <div class="info-item">
-                <span class="label">💵 TOTAL:</span>
+                <span class="label"> TOTAL:</span>
                 <span class="value total-value" style="font-weight: bold; font-size: 18px;">-</span>
             </div>
         </div>
@@ -508,7 +508,7 @@ function eliminarPerro(btn) {
     const totalPerros = document.querySelectorAll('.perro-item').length;
     
     if (totalPerros <= 1) {
-        alert('⚠️ Debe haber al menos un perro');
+        alert(' Debe haber al menos un perro');
         return;
     }
     
@@ -526,7 +526,7 @@ function actualizarNumerosPerros() {
     perros.forEach((perro, index) => {
         const numero = perro.querySelector('.perro-numero');
         if (numero) {
-            numero.textContent = `🐕 Perro #${index + 1}`;
+            numero.textContent = ` Perro #${index + 1}`;
         }
     });
 }
@@ -567,7 +567,7 @@ async function procesarFormulario(e) {
         const servicio = perro.querySelector('.select-servicio');
         
         if (!nombrePerro || !nombrePerro.value || !tamano.value || !servicio.value) {
-            alert(`⚠️ Complete todos los datos del Perro #${index + 1}`);
+            alert(` Complete todos los datos del Perro #${index + 1}`);
             todosCompletos = false;
             return;
         }
@@ -582,7 +582,7 @@ async function procesarFormulario(e) {
     const descripcionGeneral = document.getElementById('descripcion_general').value.trim();
     
     if (!nombreCliente || !telefono || !fecha || !hora) {
-        alert('⚠️ Complete todos los campos obligatorios');
+        alert(' Complete todos los campos obligatorios');
         return false;
     }
 
@@ -644,18 +644,18 @@ function construirMensajeWhatsApp(datos) {
     const fechaFormateada = fechaObj.toLocaleDateString('es-AR', opciones);
     const horaFormateada = hora.substring(0, 5);
 
-    let mensaje = `🐾 *SOLICITUD DE TURNO - MUNDO CAN-CAN* 🐾\n\n`;
+    let mensaje = ` *SOLICITUD DE TURNO - MUNDO CAN-CAN* 🐾\n\n`;
     mensaje += `═══════════════════════════\n\n`;
-    mensaje += `👤 *DATOS DEL CLIENTE*\n`;
+    mensaje += ` *DATOS DEL CLIENTE*\n`;
     mensaje += `━━━━━━━━━━━━━━━━━━━━━━━━\n`;
     mensaje += `Nombre: ${nombreCliente}\n`;
-    mensaje += `📞 Teléfono: ${telefono}\n`;
-    mensaje += `\n📅 *FECHA Y HORARIO*\n`;
+    mensaje += ` Teléfono: ${telefono}\n`;
+    mensaje += `\n *FECHA Y HORARIO*\n`;
     mensaje += `━━━━━━━━━━━━━━━━━━━━━━━━\n`;
-    mensaje += `📆 Fecha: ${fechaFormateada}\n`;
-    mensaje += `🕐 Hora: ${horaFormateada}\n\n`;
+    mensaje += ` Fecha: ${fechaFormateada}\n`;
+    mensaje += ` Hora: ${horaFormateada}\n\n`;
  
-    mensaje += `🐕 *MASCOTAS ${perros.length}*\n`;
+    mensaje += ` *MASCOTAS ${perros.length}*\n`;
     mensaje += `═══════════════════════════\n\n`;
     
     let precioTotal = 0;
@@ -696,9 +696,9 @@ function construirMensajeWhatsApp(datos) {
         precioTotal += precioTotalPerro;
         
         mensaje += `*${index + 1}. ${nombrePerro.toUpperCase()}*\n`;
-        mensaje += `    📏 Tamaño: ${tamanoTexto}\n`;
-        mensaje += `    ✂️ Servicio: ${servicioNombre}\n`;
-        mensaje += `    💰 Precio base: $${precioBase.toFixed(2)}\n`;
+        mensaje += `     Tamaño: ${tamanoTexto}\n`;
+        mensaje += `     Servicio: ${servicioNombre}\n`;
+        mensaje += `     Precio base: $${precioBase.toFixed(2)}\n`;
         
         if (adicionalesTexto.length > 0) {
             mensaje += `    ➕ Adicionales:\n`;
@@ -707,27 +707,27 @@ function construirMensajeWhatsApp(datos) {
             });
         }
         
-        mensaje += `    💵 Total: $${precioTotalPerro.toFixed(2)}\n`;
+        mensaje += `     Total: $${precioTotalPerro.toFixed(2)}\n`;
         
         if (comentarios) {
-            mensaje += `    📝 Observaciones: ${comentarios}\n`;
+            mensaje += `     Observaciones: ${comentarios}\n`;
         }
         mensaje += `\n`;
     });
 
     mensaje += `═══════════════════════════\n`;
-    mensaje += `💵 *TOTAL A PAGAR: $${precioTotal.toFixed(2)}*\n`;
+    mensaje += ` *TOTAL A PAGAR: $${precioTotal.toFixed(2)}*\n`;
     mensaje += `═══════════════════════════\n`;
     
     if (descripcionGeneral) {
-        mensaje += `\n📋 *COMENTARIOS GENERALES:*\n`;
+        mensaje += `\n *COMENTARIOS GENERALES:*\n`;
         mensaje += `${descripcionGeneral}\n\n`;
     }
     
-    mensaje += `\n✅ *IMPORTANTE: Tu turno queda CONFIRMADO automáticamente con este mensaje. No es necesario esperar respuesta.*\n`;
+    mensaje += `\n *IMPORTANTE: Tu turno queda CONFIRMADO automáticamente con este mensaje. No es necesario esperar respuesta.*\n`;
     mensaje += `\n━━━━━━━━━━━━━━━━━━━━━━━━\n`;
     mensaje += `_Enviado desde el sistema de reservas_\n`;
-    mensaje += `_Mundo Can-Can 🐾_`;
+    mensaje += `_Mundo Can-Can _`;
     
     return mensaje;
 }
@@ -739,6 +739,6 @@ function enviarWhatsApp(mensaje) {
     const ventana = window.open(urlWhatsApp, '_blank');
     
     if (!ventana) {
-        alert('⚠️ Por favor habilite las ventanas emergentes para WhatsApp');
+        alert(' Por favor habilite las ventanas emergentes para WhatsApp');
     }
 }
