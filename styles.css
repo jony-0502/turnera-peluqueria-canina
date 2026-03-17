@@ -15,7 +15,6 @@ body {
     padding: 20px;
 }
 
-/* Alerta importante */
 .alerta-importante {
     background: #000000;
     color: #ffffff;
@@ -37,13 +36,12 @@ body {
     color: #ffffff;
 }
 
-/* Container principal */
+
 .container {
     max-width: 1000px;
     margin: 0 auto;
 }
 
-/* Header */
 header {
     background: white;
     padding: 30px;
@@ -81,7 +79,6 @@ header p {
     font-size: 18px;
 }
 
-/* Main content */
 main {
     background: white;
     border-radius: 8px;
@@ -89,14 +86,12 @@ main {
     overflow: hidden;
 }
 
-/* Form wrapper */
 .form-wrapper {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
     gap: 0;
 }
 
-/* Formulario */
 form {
     padding: 40px;
     border-right: 2px solid #f0f0f0;
@@ -152,7 +147,6 @@ form h2 {
     background-color: #f0f0f0;
 }
 
-/* Info boxes */
 .info-box {
     background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
     border: 2px solid #667eea;
@@ -196,7 +190,6 @@ form h2 {
     font-size: 18px;
 }
 
-/* Alert boxes */
 .alert-box {
     background: #fff3cd;
     border: 2px solid #ffc107;
@@ -219,7 +212,6 @@ form h2 {
     color: #155724;
 }
 
-/* Help text */
 .help-text {
     display: block;
     color: #999;
@@ -227,7 +219,6 @@ form h2 {
     margin-top: 5px;
 }
 
-/* Botones */
 .btn-submit {
     width: 100%;
     padding: 16px;
@@ -302,7 +293,6 @@ form h2 {
     transform: translateY(0);
 }
 
-/* Note */
 .note {
     text-align: center;
     color: #999;
@@ -310,7 +300,6 @@ form h2 {
     margin-top: 15px;
 }
 
-/* Info section */
 .info-section {
     padding: 40px;
     background: linear-gradient(135deg, #f8f9ff 0%, #f0f0ff 100%);
@@ -358,7 +347,7 @@ form h2 {
     margin-bottom: 0;
 }
 
-/* Perros */
+
 .perro-item {
     background: #f9f9f9;
     padding: 30px;
@@ -385,7 +374,6 @@ form h2 {
     color: #667eea;
 }
 
-/* Adicionales */
 .adicionales-container {
     margin-top: 30px;
     margin-bottom: 30px;
@@ -448,7 +436,6 @@ form h2 {
     color: #999;
 }
 
-/* Adicionales bloqueados */
 .adicionales-deshabilitados {
     opacity: 0.6;
     pointer-events: none;
@@ -483,7 +470,6 @@ form h2 {
     opacity: 0.5;
 }
 
-/* Descripción del servicio */
 .descripcion-servicio {
     background: #f0f8ff;
     border-left: 4px solid #667eea;
@@ -506,7 +492,6 @@ form h2 {
     margin: 0;
 }
 
-/* Separadores */
 .separador {
     margin: 40px 0;
     padding: 20px 0;
@@ -521,7 +506,6 @@ form h2 {
     font-size: 24px;
 }
 
-/* Mensajes de disponibilidad */
 .mensaje-disponibilidad {
     margin-top: 10px;
     padding: 12px;
@@ -575,7 +559,6 @@ form h2 {
     border: 2px solid #dc3545;
 }
 
-/* Modal de bases y condiciones */
 .bases-footer {
     text-align: center;
     padding: 30px 20px;
@@ -741,7 +724,6 @@ form h2 {
     transform: translateY(0);
 }
 
-/* Scrollbar personalizado para modal */
 .modal-body::-webkit-scrollbar {
     width: 8px;
 }
@@ -759,7 +741,6 @@ form h2 {
     background: #764ba2;
 }
 
-/* Ubicación */
 .ubicacion-section {
     background: white;
     padding: 40px;
@@ -825,7 +806,6 @@ form h2 {
     margin-top: 10px;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     body {
         padding: 10px;
@@ -984,12 +964,10 @@ form h2 {
     }
 }
 
-/* Smooth scroll */
 html {
     scroll-behavior: smooth;
 }
 
-/* Selección de texto personalizada */
 ::selection {
     background: #667eea;
     color: white;
