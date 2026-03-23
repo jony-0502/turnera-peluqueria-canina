@@ -1,4 +1,4 @@
-const NUMERO_WHATSAPP = '5491163663466';
+const NUMERO_WHATSAPP = '54911223355';
 
 let contadorPerros = 1;
 let timeoutVerificacion = null;
